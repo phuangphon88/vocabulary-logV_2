@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คลังเก็บคำศัพท์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="top">
+        <h1>คลังเก็บคำศัพท์📚</h1>
+        <p class="tagline">🔖บันทึกคำศัพท์ภาษาที่กำลังเรียน</p>
+    </header>
+
+    <main>
+        <section id="add-section">
+            <h2>🌐เพิ่มคำศัพท์ใหม่🌐</h2>
+            <input type="text" id="word-input" placeholder="คำศัพท์ (word)">
+            <input type="text" id="meaning-input" placeholder="ความหมาย (meaning)">
+            <input type="text" id="language-input" placeholder="ภาษา (language)">
+            <label class="checkbox-label">
+                <input type="checkbox" id="mastered-input">
+                ✨จำได้แม่นแล้ว
+            </label>
+            <button id="add-btn">เพิ่ม</button>
+            <p id="message"></p>
+        </section>
+
+        <section id="list-section">
+            <h2>🗂️รายการคำศัพท์🗂️</h2>
+
+            <label for="filter-select">🏷️กรอง:</label>
+            <select id="filter-select">
+                <option value="">📝ทั้งหมด</option>
+                <option value="false">🧠ยังไม่แม่น</option>
+                <option value="true">💡แม่นแล้ว</option>
+            </select>
+
+            <ul id="vocab-list"></ul>
+            <p class="hint">🔥กดปุ่มเพื่อสลับสถานะ "ยังไม่แม่น"/"แม่นแล้ว" หรือกดลบเพื่อลบออก</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 คลังเก็บคำศัพท์ — Mini Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
